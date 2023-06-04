@@ -201,8 +201,10 @@
 							<div class="product-image-wrapper">
 								<img class="product-image" src="./images/products/hotel-amara.jpg" width="300" height="212" alt="">
 							</div>
-							<span class="product-description block-description">Гостиница</span>
-							<span class="product-price block-description">От 4000 ₽</span>
+							<p class="product-description block-description">
+								<span class="product-description-item product-hotel-type">Гостиница</span>
+								<span class="product-description-item product-price">От 4000 ₽</span>
+							</p>
 
 							<div class="product-row-bottom">
 								<a class="button button-brown" href="javascript:void(0)">Подробнее</a>
@@ -219,8 +221,10 @@
 							<div class="product-image-wrapper">
 								<img class="product-image" src="./images/products/hotel-villas.jpg" width="300" height="212" alt="">
 							</div>
-							<span class="product-description block-description">Гостиница</span>
-							<span class="product-price block-description">От 5000 ₽</span>
+							<p class="product-description block-description">
+								<span class="product-description-item product-hotel-type">Гостиница</span>
+								<span class="product-description-item product-price">От 5000 ₽</span>
+							</p>
 
 							<div class="product-row-bottom">
 								<a class="button button-brown" href="javascript:void(0)">Подробнее</a>
@@ -237,8 +241,10 @@
 							<div class="product-image-wrapper">
 								<img class="product-image" src="./images/products/hotel-desert.jpg" width="300" height="212" alt="">
 							</div>
-							<span class="product-description block-description">Гостиница</span>
-							<span class="product-price block-description">От 2500 ₽</span>
+							<p class="product-description block-description">
+								<span class="product-description-item product-hotel-type">Гостиница</span>
+								<span class="product-description-item product-price">От 2500 ₽</span>
+							</p>
 
 							<div class="product-row-bottom">
 								<a class="button button-brown" href="javascript:void(0)">Подробнее</a>
@@ -255,8 +261,10 @@
 							<div class="product-image-wrapper">
 								<img class="product-image" src="./images/products/hotel-green-tree.jpg" width="300" height="212" alt="">
 							</div>
-							<span class="product-description block-description">Гостиница</span>
-							<span class="product-price block-description">От 1500 ₽</span>
+							<p class="product-description block-description">
+								<span class="product-description-item product-hotel-type">Гостиница</span>
+								<span class="product-description-item product-price">От 1500 ₽</span>
+							</p>
 
 							<div class="product-row-bottom">
 								<a class="button button-brown" href="javascript:void(0)">Подробнее</a>
@@ -292,49 +300,51 @@
 				</section>
 
 				<section class="subscribe subscribe-theme-light">
-					<div class="subscribe-content subscribe-content-theme-light">
-						<h2 class="section-title">Подпишитесь на рассылку</h2>
+					<div class="subscribe-text subscribe-text-theme-light">
+						<h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
 						<p class="section-description">
 							Только полезная информация и никакого спама,<br>честное бойскаутское!
 						</p>
-
-						<form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
-							<label class="subscribe-form-field">
-								<span class="visually-hidden">Введите ваш e-mail</span>
-								<input class="subscribe-form-input field" type="email" name="subscribe-email" placeholder="Ваш e-mail" required>
-							</label>
-							<button class="subscribe-form-button button button-blue button-big" type="submit">Подписаться</button>
-						</form>
 					</div>
+
+					<form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+						<label class="subscribe-form-field">
+							<span class="visually-hidden">Введите ваш e-mail</span>
+							<input class="subscribe-form-input field" type="email" name="subscribe-email" placeholder="Ваш e-mail" required>
+						</label>
+						<button class="subscribe-form-button button button-blue button-big" type="submit">Подписаться</button>
+					</form>
 				</section>
 			</main>
 
 			<footer class="page-footer section-container">
-				<ul class="socials-list reset-list">
-					<li class="socials-item">
-						<a class="socials-link socials-vk" href="https://vk.com/htmlacademy" target="_blank">
-							<span class="visually-hidden">Мы во VKontakte</span>
-						</a>
-					</li>
-					<li class="socials-item">
-						<a class="socials-link socials-telegram" href="https://t.me/htmlacademy" target="_blank">
-							<span class="visually-hidden">Мы в Telegram</span>
-						</a>
-					</li>
-					<li class="socials-item">
-						<a class="socials-link socials-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-							<span class="visually-hidden">Мы на YouTube</span>
-						</a>
-					</li>
-				</ul>
+				<div class="page-footer-wrapper">
+					<ul class="socials-list reset-list">
+						<li class="socials-item">
+							<a class="socials-link socials-vk" href="https://vk.com/htmlacademy" target="_blank">
+								<span class="visually-hidden">Мы во VKontakte</span>
+							</a>
+						</li>
+						<li class="socials-item">
+							<a class="socials-link socials-telegram" href="https://t.me/htmlacademy" target="_blank">
+								<span class="visually-hidden">Мы в Telegram</span>
+							</a>
+						</li>
+						<li class="socials-item">
+							<a class="socials-link socials-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+								<span class="visually-hidden">Мы на YouTube</span>
+							</a>
+						</li>
+					</ul>
 
-				<address class="page-footer-contacts">
-					<a class="page-footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-				</address>
+					<address class="page-footer-contacts">
+						<a class="page-footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+					</address>
 
-				<a class="web-developer-logo" href="https://htmlacademy.ru/" target="_blank">
-					<span class="visually-hidden">Разработчик дизайна сайта - HTML Academy</span>
-				</a>
+					<a class="web-developer-logo" href="https://htmlacademy.ru/" target="_blank">
+						<span class="visually-hidden">Разработчик дизайна сайта - HTML Academy</span>
+					</a>
+				</div>
 			</footer>
 
 		</div>
