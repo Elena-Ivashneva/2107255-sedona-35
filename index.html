@@ -18,10 +18,12 @@
 	<body>
 		<div class="page-container container">
 
-			<header class="page-header section-container">
+			<header class="page-header section-wrapper">
 				<a class="logo" href="./index.html" aria-current="page" aria-label="Главная">
 					<img class="logo-image" src="./images/logo.svg" width="140" height="71" alt="Логотип сайта «City of Sedona».">
 				</a>
+
+				<!-- Для выделения текущей страницы - <a> заменить на <span>, добавить класс "is-current" и удалить класс "page-header-link" -->
 
 				<nav class="main-navigation">
 					<ul class="site-navigation text-heading-capitalize reset-list">
@@ -29,21 +31,21 @@
 							<span class="site-navigation-link is-current">Главная</span>
 						</li>
 						<li class="site-navigation-item">
-							<a class="site-navigation-link" href="javascript:void(0)">О седоне</a>
+							<a class="site-navigation-link page-header-link" href="javascript:void(0)">О седоне</a>
 						</li>
 						<li class="site-navigation-item">
-							<a class="site-navigation-link" href="./catalog.html">Гостиницы</a>
+							<a class="site-navigation-link page-header-link" href="./catalog.html">Гостиницы</a>
 						</li>
 					</ul>
 				</nav>
 
 				<div class="user-menu">
-					<a class="user-menu-button user-menu-search" href="javascript:void(0)">
+					<a class="user-menu-button user-menu-search page-header-link" href="javascript:void(0)">
 						<span class="visually-hidden">Поиск</span>
 					</a>
-					<a class="user-menu-button user-menu-heart" href="javascript:void(0)">
+					<a class="user-menu-button user-menu-heart page-header-link" href="javascript:void(0)">
 						<span class="visually-hidden">Избранное</span>
-						<span class="heart-counter">12</span>
+						<span class="user-menu-heart-counter">12</span>
 					</a>
 				</div>
 
@@ -171,7 +173,7 @@
 				</section>
 			</main>
 
-			<footer class="page-footer section-container">
+			<footer class="page-footer section-wrapper">
 				<div class="page-footer-wrapper">
 					<ul class="footer-socials-list reset-list">
 						<li class="footer-socials-item">
@@ -192,10 +194,10 @@
 					</ul>
 
 					<address class="page-footer-contacts">
-						<a class="page-footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+						<a class="page-footer-phone page-header-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
 					</address>
 
-					<a class="page-footer-developer" href="https://htmlacademy.ru/" target="_blank">
+					<a class="page-footer-developer page-header-link" href="https://htmlacademy.ru/" target="_blank">
 						<span class="visually-hidden">Разработчик дизайна сайта - HTML Academy</span>
 					</a>
 				</div>

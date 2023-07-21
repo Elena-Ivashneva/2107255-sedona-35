@@ -77,10 +77,9 @@ img {
 	margin: 0 auto;
 }
 
-.section-container {
+.section-wrapper {
 	padding: 0 70px;
 }
-
 
 /* === Headings and Texts === */
 
@@ -139,6 +138,7 @@ img {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	min-height: 36px;
 	margin: 0;
 	padding: 8px 20px;
 	font-family: inherit;
@@ -155,6 +155,7 @@ img {
 }
 
 .button-big {
+	font-weight: 700;
 	font-size: 20px;
 	line-height: 36px;
 }
@@ -259,11 +260,11 @@ img {
 	opacity: 0.6;
 }
 
-.text-field:hover {
+.field:hover {
 	background-color: #e6e6e6;
 }
 
-.text-field:focus {
+.field:focus {
 	position: relative;
 	z-index: 1;
 
@@ -271,7 +272,7 @@ img {
 	outline: 3px solid #83b3d3;
 }
 
-.text-field:active {
+.field:active {
 	padding: 0 18px;
 
 	background-color: #f2f2f2;
@@ -289,7 +290,7 @@ img {
 .logo {
 	z-index: 1;
 	flex-shrink: 0;
-	margin: 0 28px -7px 0;
+	margin: 0 29px -7px 0;
 }
 
 .logo-image {
@@ -298,22 +299,25 @@ img {
 }
 
 .main-navigation {
-	margin-right: 30px;
+	margin-right: 60px;
 }
 
 .site-navigation {
 	display: flex;
 	flex-wrap: wrap;
 	min-width: 339px;
-	max-width: 550px;
+	max-width: 499px;
 }
 
 .site-navigation-link {
-	position: relative;
 	display: block;
 	padding: 20px 16px;
 	text-decoration: none;
 	color: inherit;
+}
+
+.site-navigation-link.is-current {
+	position: relative;
 }
 
 .site-navigation-link.is-current::after {
@@ -345,11 +349,11 @@ img {
 }
 
 .user-menu-button::before {
+	flex-shrink: 0;
 	width: 20px;
 	height: 20px;
 	mask-repeat: no-repeat;
-	mask-position: center;
-	mask-size: contain;
+	mask-size: 100% 100%;
 	background-color: currentcolor;
 	content: "";
 }
@@ -362,15 +366,17 @@ img {
 	mask-image: url("../icons/stack.svg#user-menu-heart");
 }
 
-.heart-counter {
+.user-menu-heart-counter {
 	position: absolute;
 	top: 11px;
-	right: 4px;
+	left: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 20px;
-	height: 20px;
+	min-width: 20px;
+	max-width: 35px;
+	min-height: 20px;
+	padding: 3px;
 	font-size: 10px;
 	line-height: 10px;
 	text-align: center;
@@ -389,8 +395,8 @@ img {
 }
 
 .user-button {
-	flex-shrink: 0;
-	width: 160px;
+	min-width: 160px;
+	max-width: 180px;
 	margin: 14px 0;
 }
 
@@ -425,12 +431,10 @@ img {
 .footer-socials-link::before {
 	width: 33px;
 	height: 32px;
-
 	mask-repeat: no-repeat;
 	mask-position: center;
 	mask-size: contain;
 	background-color: #83b3d3;
-
 	content: "";
 }
 
@@ -473,8 +477,6 @@ img {
 
 .page-footer-developer {
 	justify-self: end;
-	width: 115px;
-	height: 33px;
 	color: inherit;
 }
 
@@ -482,10 +484,8 @@ img {
 	display: block;
 	width: 115px;
 	height: 33px;
-
 	mask: url("../icons/stack.svg#logo-htmlacademy") no-repeat center / contain;
 	background-color: currentcolor;
-
 	content: "";
 }
 
@@ -709,7 +709,7 @@ img {
 
 /* === Inner Header  === */
 
-.inner-header-filter-container {
+.catalog-filter-container {
 	padding-top: 35px;
 	padding-bottom: 70px;
 	color: #ffffff;
@@ -731,32 +731,26 @@ img {
 .breadcrumbs {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 8px 10px;
 	font-size: 16px;
 	line-height: 21px;
 }
 
 .breadcrumbs-item {
 	display: flex;
-	margin-right: 10px;
+	gap: 10px;
 }
 
-.breadcrumbs-item:last-child {
-	margin-right: 0;
-}
-
-.breadcrumbs-item::before {
+.breadcrumbs-item::after {
 	align-self: center;
 	width: 8px;
 	height: 20px;
-	margin-right: 10px;
-
 	mask: url("../icons/stack.svg#breadcrumbs-separator") no-repeat center / contain;
 	background-color: currentcolor;
-
 	content: "";
 }
 
-.breadcrumbs-item:first-child::before {
+.breadcrumbs-item:last-child::after {
 	content: none;
 }
 
@@ -773,10 +767,8 @@ img {
 .breadcrumbs-home::before {
 	width: 13px;
 	height: 15px;
-
-	mask: url("../icons/stack.svg#breadcrubs-home") no-repeat center / contain;
+	mask: url("../icons/stack.svg#breadcrumbs-home") no-repeat center / contain;
 	background-color: currentcolor;
-
 	content: "";
 }
 
@@ -790,6 +782,10 @@ img {
 
 .breadcrumbs-link:active {
 	color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-link.is-current:hover {
+	color: inherit;
 }
 
 /* === Catalog Filter === */
@@ -832,16 +828,16 @@ img {
 }
 
 .filter-control {
-	display: flex;
-	align-items: center;
+	display: inline-flex;
+	vertical-align: top;
+	cursor: pointer;
 }
 
 .filter-mark {
 	flex-shrink: 0;
 	width: 20px;
 	height: 20px;
-	margin-right: 16px;
-
+	margin: 1.5px 16px 1.5px 0;
 	background-color: #ffffff;
 }
 
@@ -853,7 +849,6 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	border-radius: 50%;
 }
 
@@ -878,15 +873,15 @@ img {
 	content: "";
 }
 
-.filter-input-label:hover {
+.filter-control:hover {
 	opacity: 0.6;
 }
 
-.filter-input:focus + .filter-input-mark {
+.filter-input:focus + .filter-mark {
 	outline: 3px solid #83b3d3;
 }
 
-.filter-input-label:active {
+.filter-control:active {
 	opacity: 0.3;
 }
 
@@ -904,31 +899,22 @@ img {
 
 .filter-range-fields {
 	display: grid;
-	grid-template-columns: repeat(2, 143px);
+	grid-template-columns: repeat(2, 1fr);
 	column-gap: 2px;
 	margin-bottom: 44px;
 }
 
 .filter-range-field {
 	position: relative;
+	cursor: pointer;
 }
 
 .filter-range-input {
-	width: 143px;
+	width: 100%;
 	height: 48px;
-	padding-right: 45px;
+	padding: 12px 52px 12px 20px;
 	font-weight: 700;
 	appearance: textfield;
-}
-
-.filter-range-input:active {
-	padding-right: 43px;
-}
-
-.filter-range-input::-webkit-outer-spin-button,
-.filter-range-input::-webkit-inner-spin-button {
-	appearance: none;
-	margin: 0;
 }
 
 .filter-range-min {
@@ -939,47 +925,53 @@ img {
 	border-radius: 0 4px 4px 0;
 }
 
+.filter-range-input::-webkit-outer-spin-button,
+.filter-range-input::-webkit-inner-spin-button {
+	margin: 0;
+	appearance: none;
+}
+
 .filter-range-label {
 	position: absolute;
 	top: 50%;
 	right: 20px;
+	transform: translateY(-50%);
 	z-index: 2;
+	max-width: 22px;
+	white-space: nowrap;
 	font-size: 18px;
 	line-height: 24px;
+	text-align: right;
 	color: rgba(0, 0, 0, 0.3);
-	transform: translateY(-50%);
 }
 
 .filter-range-scale {
 	position: relative;
-
-	width: 286px;
+	width: 287px;
 	height: 4px;
 	margin: 0 auto;
-
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .filter-range-bar {
 	position: absolute;
-
+	left: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	width: 227px;
 	height: 4px;
-
 	background-color: #ffffff;
 }
 
 .filter-range-toggle {
 	width: 20px;
 	height: 20px;
+	margin: 0;
 	padding: 0;
-
 	background-color: #ffffff;
 	border: 0;
 	border-radius: 5px;
-
 	cursor: pointer;
 }
 
@@ -1004,7 +996,7 @@ img {
 	padding-bottom: 60px;
 }
 
-/* Catalog Sorting */
+/* Sorting and View */
 
 .catalog-sorting-view {
 	display: flex;
@@ -1014,22 +1006,20 @@ img {
 }
 
 .catalog-products-title {
-	margin-top: 6px;
-	min-width: 338px;
+	align-self: center;
 }
 
 .catalog-sorting {
 	flex-shrink: 0;
 	width: 292px;
+	min-height: 49px;
 	margin-left: auto;
 	padding: 12px 50px 12px 18px;
 	font-family: inherit;
-	font-size: 18px;
-	line-height: 21px;
-	color: #333333;
 	background: #ffffff url("../icons/stack.svg#hotels-view-arrow") no-repeat right 18px center / 14px 13px;
 	border: 2px solid #e5e5e5;
 	border-radius: 4px;
+	cursor: pointer;
 	appearance: none;
 }
 
@@ -1056,9 +1046,7 @@ img {
 
 .catalog-view {
 	display: flex;
-	flex-wrap: wrap;
 	gap: 8px;
-	min-width: 160px;
 	max-width: 216px;
 }
 
@@ -1066,7 +1054,6 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-sizing: border-box;
 	width: 48px;
 	height: 48px;
 	color: #000000;
@@ -1112,31 +1099,24 @@ img {
 }
 
 .catalog-view-tile::before {
-	mask-image: url("../icons/stack.svg#hotels-view-tile");
+	mask-image: url("../icons/stack.svg#catalog-view-tile");
 }
 
 .catalog-view-slideshow::before {
-	mask-image: url("../icons/stack.svg#hotels-view-slideshow");
+	mask-image: url("../icons/stack.svg#catalog-view-slideshow");
 }
 
 .catalog-view-list::before {
-	mask-image: url("../icons/stack.svg#hotels-view-list");
+	mask-image: url("../icons/stack.svg#catalog-view-list");
 }
 
 /* Product Cards */
 
 .catalog-product-list {
 	display: grid;
-	grid-template-columns: repeat(3, 340px);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 	margin-bottom: 40px;
-}
-
-.catalog-product-list::after {
-	grid-column: 1 / -1;
-	margin-top: 20px;
-	border-bottom: 1px solid #e6e6e6;
-	content: "";
 }
 
 .product-card {
@@ -1165,7 +1145,7 @@ img {
 
 .product-description {
 	display: grid;
-	grid-template-columns: repeat(2, 140px);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 16px 20px;
 }
 
@@ -1175,9 +1155,13 @@ img {
 
 .product-row-bottom {
 	display: grid;
-	grid-template-columns: repeat(2, 140px);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 16px 20px;
 	margin-top: auto;
+}
+
+.product-button {
+	padding: 8px 18px;
 }
 
 .product-hotel-star {
@@ -1216,7 +1200,7 @@ img {
 }
 
 .product-rating {
-	padding: 9px 20px 8px;
+	padding: 9px 18px 8px;
 	font-size: 16px;
 	line-height: 20px;
 	text-align: center;
@@ -1228,42 +1212,35 @@ img {
 
 /* Pagination */
 
-.catalog-pagination {
+.catalog-pagination-list {
 	display: flex;
-}
-
-.catalog-pagination-item {
-	margin-right: 8px;
-}
-
-.catalog-pagination-item:last-child {
-	margin-right: 0;
-}
-
-.catalog-pagination-divider {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 60px;
-	height: 60px;
+	gap: 8px;
+	padding-top: 39px;
+	border-top: 1px solid #e6e6e6;
 }
 
 .catalog-pagination-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-sizing: border-box;
-	width: 60px;
-	height: 60px;
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 36px;
-	text-align: center;
-	text-transform: uppercase;
+	min-width: 60px;
+	max-width: 85px;
+	min-height: 60px;
+	padding: 11px;
+	white-space: nowrap;
 	text-decoration: none;
 	color: #ffffff;
-	background-color: #82b3d3;
+	border: 1px solid rgba(255, 255, 255, 0);
 	border-radius: 4px;
+}
+
+.catalog-pagination-divider {
+	color: #000000;
+}
+
+.catalog-pagination-link.is-current {
+	color: #000000;
+	background-color: #f2f2f2;
 }
 
 .catalog-pagination-link:hover,
@@ -1271,12 +1248,9 @@ img {
 	border: 1px solid #82b3d3;
 }
 
-.catalog-pagination-link.is-current,
-.catalog-pagination-link.is-current:hover,
-.catalog-pagination-link.is-current:focus,
-.catalog-pagination-link.is-current:active {
-	color: #000000;
-	background-color: #f2f2f2;
+.catalog-pagination-divider:hover,
+.catalog-pagination-link.is-current:hover {
+	border: 1px solid rgba(255, 255, 255, 0);
 }
 
 /* Modal */

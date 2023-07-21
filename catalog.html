@@ -18,18 +18,20 @@
 	<body>
 		<div class="page-container container">
 
-			<header class="page-header section-container">
+			<header class="page-header section-wrapper">
 				<a class="logo" href="./index.html" aria-label="Главная">
 					<img class="logo-image" src="./images/logo.svg" width="140" height="71" alt="Логотип сайта «City of Sedona».">
 				</a>
 
+				<!-- Для выделения текущей страницы - ссылке добавить класс "is-current" и удалить класс "page-header-link" -->
+
 				<nav class="main-navigation">
 					<ul class="site-navigation text-heading-capitalize reset-list">
 						<li class="site-navigation-item">
-							<a class="site-navigation-link" href="./index.html">Главная</a>
+							<a class="site-navigation-link page-header-link" href="./index.html">Главная</a>
 						</li>
 						<li class="site-navigation-item">
-							<a class="site-navigation-link" href="javascript:void(0)">О седоне</a>
+							<a class="site-navigation-link page-header-link" href="javascript:void(0)">О седоне</a>
 						</li>
 						<li class="site-navigation-item">
 							<span class="site-navigation-link is-current">Гостиницы</span>
@@ -38,10 +40,10 @@
 				</nav>
 
 				<div class="user-menu">
-					<a class="user-menu-button user-menu-search" href="javascript:void(0)">
+					<a class="user-menu-button user-menu-search page-header-link" href="javascript:void(0)">
 						<span class="visually-hidden">Поиск</span>
 					</a>
-					<a class="user-menu-button user-menu-heart" href="javascript:void(0)">
+					<a class="user-menu-button user-menu-heart page-header-link" href="javascript:void(0)">
 						<span class="visually-hidden">Избранное</span>
 						<span class="heart-counter">12</span>
 					</a>
@@ -51,10 +53,12 @@
 			</header>
 
 			<main class="main-inner main-container">
-				<div class="inner-header-filter-container section-container">
+				<div class="catalog-filter-container section-wrapper">
 
 					<header class="inner-header">
 						<h1 class="inner-title main-title">Гостиницы Седоны</h1>
+
+						<!-- Для выделения текущей страницы - ссылке добавить класс "is-current" -->
 
 						<ul class="breadcrumbs reset-list">
 							<li class="breadcrumbs-item">
@@ -63,13 +67,13 @@
 								</a>
 							</li>
 							<li class="breadcrumbs-item">
-								<span class="breadcrumbs-link">Гостиницы</span>
+								<span class="breadcrumbs-link is-current">Гостиницы</span>
 							</li>
 						</ul>
 					</header>
 
 					<section class="catalog-filter">
-						<h2 class="visually-hidden">Фильтр</h2>
+						<h2 class="visually-hidden">Фильтр по гостиницам</h2>
 
 						<form class="filter" action="https://echo.htmlacademy.ru/" method="get">
 							<fieldset class="filter-group">
@@ -134,22 +138,22 @@
 								<div class="filter-range">
 									<div class="filter-range-fields">
 										<label class="filter-range-field">
-											<input class="filter-range-input filter-range-min field" type="number" name="filter-price-min" value="0" min="0">
 											<span class="filter-range-label">от</span>
+											<input class="filter-range-input filter-range-min field" type="number" name="filter-min-price" value="0" min="0">
 										</label>
 										<label class="filter-range-field">
-											<input class="filter-range-input filter-range-max field" type="number" name="filter-price-max" value="9000" min="0">
 											<span class="filter-range-label">до</span>
+											<input class="filter-range-input filter-range-max field" type="number" name="filter-max-price" value="9000" min="0">
 										</label>
 									</div>
 
 									<div class="filter-range-scale">
 										<div class="filter-range-bar">
 											<button class="filter-range-toggle" type="button">
-												<span class="visually-hidden">Изменить минимальную стоимость</span>
+												<span class="visually-hidden">Установить минимальную стоимость</span>
 											</button>
 											<button class="filter-range-toggle" type="button">
-												<span class="visually-hidden">Изменить максимальную стоимость</span>
+												<span class="visually-hidden">Установить максимальную стоимость</span>
 											</button>
 										</div>
 									</div>
@@ -157,24 +161,26 @@
 							</fieldset>
 
 							<div class="filter-buttons">
-								<button class="button button-blue" type="submit">Применить</button>
-								<button class="button button-transparent" type="reset">Сбросить</button>
+								<button class="filter-button button button-blue" type="submit">Применить</button>
+								<button class="filter-button button button-transparent" type="reset">Сбросить</button>
 							</div>
 						</form>
 					</section>
 				</div>
 
-				<section class="catalog-products section-container">
+				<section class="catalog-products section-wrapper">
 					<div class="catalog-sorting-view">
 						<h2 class="catalog-products-title section-title">
 							Найдено гостиниц: <span class="catalog-products-number">38</span>
 						</h2>
 
-						<select class="catalog-sorting" name="catalog-sorting" aria-label="Сортировать">
+						<select class="catalog-sorting block-description" name="catalog-sorting" aria-label="Сортировать">
 							<option value="cheap">Сначала дешевые</option>
 							<option value="expensive">Сначала дорогие</option>
 							<option value="popular">Сначала популярные</option>
 						</select>
+
+						<!-- Для выделения текущего вида каталога - ссылке добавить класс "is-current" -->
 
 						<ul class="catalog-view reset-list">
 							<li class="catalog-view-item">
@@ -207,8 +213,8 @@
 							</p>
 
 							<div class="product-row-bottom">
-								<a class="button button-brown" href="javascript:void(0)">Подробнее</a>
-								<button class="button button-blue" type="button">В избранное</button>
+								<a class="product-button button button-brown" href="javascript:void(0)">Подробнее</a>
+								<button class="product-button button button-blue" type="button">В избранное</button>
 								<div class="product-hotel-star product-hotel-four">
 									<span class="visually-hidden">Гостиница четыре звезды</span>
 								</div>
@@ -227,8 +233,8 @@
 							</p>
 
 							<div class="product-row-bottom">
-								<a class="button button-brown" href="javascript:void(0)">Подробнее</a>
-								<button class="button button-green" type="button">В избранном</button>
+								<a class="product-button button button-brown" href="javascript:void(0)">Подробнее</a>
+								<button class="product-button button button-green" type="button">В избранном</button>
 								<div class="product-hotel-star product-hotel-four">
 									<span class="visually-hidden">Гостиница четыре звезды</span>
 								</div>
@@ -247,8 +253,8 @@
 							</p>
 
 							<div class="product-row-bottom">
-								<a class="button button-brown" href="javascript:void(0)">Подробнее</a>
-								<button class="button button-blue" type="button">В избранное</button>
+								<a class="product-button button button-brown" href="javascript:void(0)">Подробнее</a>
+								<button class="product-button button button-blue" type="button">В избранное</button>
 								<div class="product-hotel-star product-hotel-three">
 									<span class="visually-hidden">Гостиница три звезды</span>
 								</div>
@@ -267,8 +273,8 @@
 							</p>
 
 							<div class="product-row-bottom">
-								<a class="button button-brown" href="javascript:void(0)">Подробнее</a>
-								<button class="button button-blue" type="button">В избранное</button>
+								<a class="product-button button button-brown" href="javascript:void(0)">Подробнее</a>
+								<button class="product-button button button-blue" type="button">В избранное</button>
 								<div class="product-hotel-star product-hotel-two">
 									<span class="visually-hidden">Гостиница две звезды</span>
 								</div>
@@ -277,24 +283,26 @@
 						</li>
 					</ul>
 
-					<ul class="catalog-pagination reset-list">
+					<!-- Для выделения текущей страницы - ссылке добавить класс "is-current" и удалить класс "button-blue" -->
+
+					<ul class="catalog-pagination-list reset-list">
 						<li class="catalog-pagination-item">
-							<span class="catalog-pagination-link is-current">1</span>
+							<span class="catalog-pagination-link button-big is-current">1</span>
 						</li>
 						<li class="catalog-pagination-item">
-							<a class="catalog-pagination-link" href="javascript:void(0)">2</a>
+							<a class="catalog-pagination-link button-big button-blue" href="javascript:void(0)">2</a>
 						</li>
 						<li class="catalog-pagination-item">
-							<a class="catalog-pagination-link" href="javascript:void(0)">3</a>
+							<a class="catalog-pagination-link button-big button-blue" href="javascript:void(0)">3</a>
 						</li>
 						<li class="catalog-pagination-item">
-							<a class="catalog-pagination-link" href="javascript:void(0)">4</a>
+							<a class="catalog-pagination-link button-big button-blue" href="javascript:void(0)">4</a>
 						</li>
 						<li class="catalog-pagination-item">
-							<span class="catalog-pagination-divider">...</span>
+							<span class="catalog-pagination-link catalog-pagination-divider">...</span>
 						</li>
 						<li class="catalog-pagination-item">
-							<a class="catalog-pagination-link" href="javascript:void(0)">10</a>
+							<a class="catalog-pagination-link button-big button-blue" href="javascript:void(0)">10</a>
 						</li>
 					</ul>
 				</section>
@@ -317,31 +325,31 @@
 				</section>
 			</main>
 
-			<footer class="page-footer section-container">
+			<footer class="page-footer section-wrapper">
 				<div class="page-footer-wrapper">
-					<ul class="socials-list reset-list">
-						<li class="socials-item">
-							<a class="socials-link socials-vk" href="https://vk.com/htmlacademy" target="_blank">
+					<ul class="footer-socials-list reset-list">
+						<li class="footer-socials-item">
+							<a class="footer-socials-link footer-socials-vk" href="https://vk.com/htmlacademy" target="_blank">
 								<span class="visually-hidden">Мы во VKontakte</span>
 							</a>
 						</li>
-						<li class="socials-item">
-							<a class="socials-link socials-telegram" href="https://t.me/htmlacademy" target="_blank">
+						<li class="footer-socials-item">
+							<a class="footer-socials-link footer-socials-telegram" href="https://t.me/htmlacademy" target="_blank">
 								<span class="visually-hidden">Мы в Telegram</span>
 							</a>
 						</li>
-						<li class="socials-item">
-							<a class="socials-link socials-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+						<li class="footer-socials-item">
+							<a class="footer-socials-link footer-socials-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
 								<span class="visually-hidden">Мы на YouTube</span>
 							</a>
 						</li>
 					</ul>
 
 					<address class="page-footer-contacts">
-						<a class="page-footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+						<a class="page-footer-phone page-header-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
 					</address>
 
-					<a class="web-developer-logo" href="https://htmlacademy.ru/" target="_blank">
+					<a class="page-footer-developer page-header-link" href="https://htmlacademy.ru/" target="_blank">
 						<span class="visually-hidden">Разработчик дизайна сайта - HTML Academy</span>
 					</a>
 				</div>
