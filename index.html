@@ -4,75 +4,75 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Главная | Седона | HTML Academy</title>
-		<meta name="description" content="Седона - туристический городок в штате Аризона.">
-		<link rel="stylesheet" href="./styles/styles.min.css">
-
-		<link rel="icon" href="./favicon.ico" sizes="any">
-		<link rel="icon" href="./favicons/favicon.svg" type="image/svg+xml" sizes="any">
-		<link rel="icon" href="./favicons/favicon-32.png" type="image/png" sizes="32x32">
-		<link rel="apple-touch-icon" href="./favicons/favicon-180.png" type="image/png" sizes="180x180">
+		<title>Главная | Седона | HTML Академия</title>
+		<meta name="description" content="Первый личный проект на курсе «HTML и CSS. Профессиональная вёрстка сайтов» (расширенный тариф).">
+		<link rel="icon" href="./favicon.ico">
+		<link rel="icon" href="./images/favicons/favicon.svg" type="image/svg+xml">
+		<link rel="icon" href="./images/favicons/favicon.png" type="image/png" sizes="32x32">
+		<link rel="apple-touch-icon" href="./images/favicons/favicon-180.png" type="image/png" sizes="180x180">
 		<link rel="manifest" href="./manifest.webmanifest">
+		<link rel="stylesheet" href="./styles/styles.min.css">
 	</head>
 
 	<body>
-		<div class="page-container container">
+		<div class="page container">
 
-			<header class="page-header section-wrapper">
-				<a class="logo" href="./index.html" aria-current="page" aria-label="Главная">
-					<img class="logo-image" src="./images/logo.svg" width="140" height="71" alt="Логотип сайта «City of Sedona».">
+			<header class="header section-wrapper">
+				<a class="header__logo logo" href="./index.html" aria-label="Логотип-ссылка на Главную" aria-current="page">
+					<img src="./images/logo.svg" width="140" height="71" alt="City of Sedona.">
 				</a>
-
-				<!-- Для выделения текущей страницы - <a> заменить на <span>, добавить класс "is-current" и удалить класс "page-header-link" -->
-
-				<nav class="main-navigation">
-					<ul class="site-navigation text-heading-capitalize reset-list">
-						<li class="site-navigation-item">
-							<span class="site-navigation-link is-current">Главная</span>
+				<!-- Для выделения текущей страницы - <a> заменить на <span>, добавить класс-модификатор "current" и удалить класс "interactive-link" -->
+				<nav class="header__main-menu main-menu">
+					<ul class="main-menu__list reset-list text-accent">
+						<li class="main-menu__item">
+							<span class="main-menu__link main-menu__link--current">Главная</span>
 						</li>
-						<li class="site-navigation-item">
-							<a class="site-navigation-link page-header-link" href="javascript:void(0)">О седоне</a>
+						<li class="main-menu__item">
+							<a class="main-menu__link interactive-link" href="javascript:void(0)">О Седоне</a>
 						</li>
-						<li class="site-navigation-item">
-							<a class="site-navigation-link page-header-link" href="./catalog.html">Гостиницы</a>
+						<li class="main-menu__item">
+							<a class="main-menu__link interactive-link" href="./catalog.html">Гостиницы</a>
 						</li>
 					</ul>
 				</nav>
-
-				<div class="user-menu">
-					<a class="user-menu-button user-menu-search page-header-link" href="javascript:void(0)">
-						<span class="visually-hidden">Поиск</span>
-					</a>
-					<a class="user-menu-button user-menu-heart page-header-link" href="javascript:void(0)">
-						<span class="visually-hidden">Избранное</span>
-						<span class="user-menu-heart-counter">12</span>
-					</a>
-				</div>
-
-				<a class="user-button button button-brown" href="javascript:void(0)">Хочу сюда!</a>
+				<ul class="header__user-menu user-menu reset-list">
+					<li class="user-menu__item">
+						<a class="user-menu__button user-menu__button--search interactive-link" href="javascript:void(0)">
+							<span class="visually-hidden">Поиск</span>
+						</a>
+					</li>
+					<li class="user-menu__item">
+						<a class="user-menu__button user-menu__button--heart interactive-link" href="javascript:void(0)">
+							<span class="visually-hidden">Избранное</span>
+							<span class="user-menu__counter">12</span>
+						</a>
+					</li>
+				</ul>
+				<a class="header__button button button--brown" href="javascript:void(0)">Хочу сюда!</a>
 			</header>
 
-			<main class="main-index main-container">
-				<h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
-
+			<main class="content-index content-container">
 				<section class="hero">
-					<div class="hero-image">
-						<img class="hero-welcome" src="./images/hero-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. «Because the Grand Canyon sucks!»">
+					<div class="hero__welcome">
+						<h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
+						<img src="./images/hero-welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona. «Because the Grand Canyon sucks!»">
 					</div>
-
-					<div class="hero-text">
-						<h2 class="hero-title section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-						<p class="hero-description section-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+					<div class="hero__intro">
+						<h2 class="hero__title section-title">
+							Седона — небольшой городок в Аризоне, заслуживающий большего!
+						</h2>
+						<p class="hero__text">
+							Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
+						</p>
 					</div>
 				</section>
 
 				<section class="advantages">
 					<h2 class="visually-hidden">Преимущества Седоны</h2>
-
 					<ul class="advantages-list reset-list">
 						<li class="advantages-item advantages-item-blue">
-							<div class="advantages-text advantages-text-divider advantages-text-blue">
-								<h3 class="advantages-title block-title">Настоящий городок</h3>
+							<div class="advantages-content advantages-content-blue advantages-content-divider">
+								<h3 class="advantages__title block-title">Настоящий&nbsp; городок</h3>
 								<p class="advantages-description advantages-description-blue block-description">
 									Седона — не аттракцион для туристов, там течёт своя жизнь
 								</p>
@@ -80,24 +80,24 @@
 							<img class="advantages-image" src="./images/advantages-city.jpg" width="800" height="384" alt="Городок Седона.">
 						</li>
 						<li class="advantages-item advantages-item-light">
-							<div class="advantages-text advantages-text-divider">
-								<h3 class="advantages-title block-title">Небольшая площадь</h3>
+							<div class="advantages-content advantages-content-divider">
+								<h3 class="advantages__title block-title">Небольшая площадь</h3>
 								<p class="advantages-description block-description">
 									Все достопримечательности находятся очень близко
 								</p>
 							</div>
 						</li>
 						<li class="advantages-item advantages-item-dark">
-							<div class="advantages-text advantages-text-divider">
-								<h3 class="advantages-title block-title">Красивая дорога</h3>
+							<div class="advantages-content advantages-content-divider">
+								<h3 class="advantages__title block-title">Красивая дорога</h3>
 								<p class="advantages-description block-description">
 									Ехать в Седону из Лас-Вегаса совсем не скучно!
 								</p>
 							</div>
 						</li>
 						<li class="advantages-item advantages-item-light">
-							<div class="advantages-text advantages-text-divider">
-								<h3 class="advantages-title block-title">Мало туристов</h3>
+							<div class="advantages-content advantages-content-divider">
+								<h3 class="advantages__title block-title">Мало туристов</h3>
 								<p class="advantages-description block-description">
 									Большинство едет в Гранд Каньон и толпится там
 								</p>
@@ -105,19 +105,18 @@
 						</li>
 						<li class="advantages-item advantages-item-blue">
 							<img class="advantages-image" src="./images/advantages-bridge.jpg" width="800" height="384" alt="Природная арка из песчаника «Мост дьявола».">
-							<div class="advantages-text advantages-text-divider advantages-text-blue">
-								<h3 class="advantages-title block-title">Там есть мост дьявола</h3>
+							<div class="advantages-content advantages-content-blue advantages-content-divider">
+								<h3 class="advantages__title block-title">Там есть мост дьявола</h3>
 								<p class="advantages-description advantages-description-blue block-description">
 									Да, по нему можно пройти! Если вы осмелитесь, разумеется
 								</p>
 							</div>
 						</li>
 					</ul>
-
 					<ul class="advantages-list reset-list">
 						<li class="advantages-item advantages-item-dark">
 							<div class="advantages-text advantages-text-icon advantages-text-housing">
-								<h3 class="advantages-title block-title">Жильё</h3>
+								<h3 class="advantages__title block-title">Жильё</h3>
 								<p class="advantages-description block-description">
 									Рекомендуем пожить в&nbsp;настоящем мотеле,<br>всё как в кино!
 								</p>
@@ -125,7 +124,7 @@
 						</li>
 						<li class="advantages-item">
 							<div class="advantages-text advantages-text-icon advantages-text-eating">
-								<h3 class="advantages-title block-title">Еда</h3>
+								<h3 class="advantages__title block-title">Еда</h3>
 								<p class="advantages-description block-description">
 									Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!
 								</p>
@@ -133,7 +132,7 @@
 						</li>
 						<li class="advantages-item advantages-item-dark">
 							<div class="advantages-text advantages-text-icon advantages-text-souvenir">
-								<h3 class="advantages-title block-title">Сувениры</h3>
+								<h3 class="advantages__title block-title">Сувениры</h3>
 								<p class="advantages-description block-description">
 									Не только китайского,<br>но и настоящего местного производства!
 								</p>
@@ -142,27 +141,25 @@
 					</ul>
 				</section>
 
-				<section class="hotel-search">
-					<div class="hotel-search-text">
-						<h2 class="hotel-search-title section-title">Заинтересовались?</h2>
+				<section class="product-search">
+					<div class="product-search-text">
+						<h2 class="product-search__title section-title">Заинтересовались?</h2>
 						<p class="section-description">
 							Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне
 						</p>
 					</div>
-
-					<a class="hotel-search-button button button-big button-brown" href="javascript:void(0)">
+					<a class="product-search-button button button-big button-brown" href="javascript:void(0)">
 						Поиск гостиницы в Седоне
 					</a>
 				</section>
 
 				<section class="subscribe">
 					<div class="subscribe-text">
-						<h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
+						<h2 class="subscribe__title section-title">Подпишитесь на рассылку</h2>
 						<p class="subscribe-description section-description">
 							Только полезная информация и никакого спама, честное бойскаутское!
 						</p>
 					</div>
-
 					<form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
 						<label class="subscribe-label">
 							<span class="visually-hidden">Введите ваш e-mail</span>
@@ -173,8 +170,8 @@
 				</section>
 			</main>
 
-			<footer class="page-footer section-wrapper">
-				<div class="page-footer-wrapper">
+			<footer class="footer section-wrapper">
+				<div class="footer-wrapper">
 					<ul class="footer-socials-list reset-list">
 						<li class="footer-socials-item">
 							<a class="footer-socials-link footer-socials-vk" href="https://vk.com/htmlacademy" target="_blank">
@@ -193,18 +190,18 @@
 						</li>
 					</ul>
 
-					<address class="page-footer-contacts">
-						<a class="page-footer-phone page-header-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+					<address class="footer-contacts">
+						<a class="footer-phone header-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
 					</address>
 
-					<a class="page-footer-developer page-header-link" href="https://htmlacademy.ru/" target="_blank">
+					<a class="footer-developer header-link" href="https://htmlacademy.ru/" target="_blank">
 						<span class="visually-hidden">Разработчик дизайна сайта - HTML Academy</span>
 					</a>
 				</div>
 			</footer>
 
 			<div class="modal-container modal-container-close">
-				<div class="modal modal-hotel-search">
+				<div class="modal modal-product-search">
 					<button class="modal-close-button" type="button">
 						<span class="visually-hidden">Закрыть</span>
 					</button>
@@ -212,52 +209,52 @@
 					<section class="modal-content">
 						<h2 class="modal-title section-title">Поиск гостиницы в Седоне</h2>
 
-						<form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="post">
-							<p class="hotel-search-text-group">
-								<label class="hotel-search-label text-heading-capitalize" for="hotel-search-date-from">Дата заезда:</label>
-								<input class="hotel-search-text text-field" id="hotel-search-date-from" type="text" name="date-from" value="27 апреля 2020" placeholder="Укажите дату" required>
-								<span class="hotel-search-message hotel-search-error">Мы не можем отправить вас в прошлое.</span>
+						<form class="product-search-form" action="https://echo.htmlacademy.ru/" method="post">
+							<p class="product-search-text-group">
+								<label class="product-search-label text-heading-capitalize" for="product-search-date-from">Дата заезда:</label>
+								<input class="product-search-text text-field" id="product-search-date-from" type="text" name="date-from" value="27 апреля 2020" placeholder="Укажите дату" required>
+								<span class="product-search-message product-search-error">Мы не можем отправить вас в прошлое.</span>
 							</p>
-							<p class="hotel-search-text-group">
-								<label class="hotel-search-label text-heading-capitalize" for="hotel-search-date-to">Дата выезда:</label>
-								<input class="hotel-search-text text-field" id="hotel-search-date-to" type="text" name="date-to" value="1 сентября 2023" placeholder="Укажите дату" required>
-								<span class="hotel-search-message">На эти даты есть свободные номера. Пока есть.</span>
+							<p class="product-search-text-group">
+								<label class="product-search-label text-heading-capitalize" for="product-search-date-to">Дата выезда:</label>
+								<input class="product-search-text text-field" id="product-search-date-to" type="text" name="date-to" value="1 сентября 2023" placeholder="Укажите дату" required>
+								<span class="product-search-message">На эти даты есть свободные номера. Пока есть.</span>
 							</p>
 
-							<div class="hotel-search-number-group">
-								<label class="hotel-search-label text-heading-capitalize" for="hotel-search-adults">Взрослые:</label>
-								<div class="hotel-search-number">
-									<button class="hotel-search-number-button number-button-minus" type="button">
+							<div class="product-search-number-group">
+								<label class="product-search-label text-heading-capitalize" for="product-search-adults">Взрослые:</label>
+								<div class="product-search-number">
+									<button class="product-search-number-button number-button-minus" type="button">
 										<span class="visually-hidden">Уменьшить количество</span>
 									</button>
-									<input class="hotel-search-number-input text-field" id="hotel-search-adults" type="number" name="adults" value="2" min="0" max="99" required>
-									<button class="hotel-search-number-button number-button-plus" type="button">
+									<input class="product-search-number-input text-field" id="product-search-adults" type="number" name="adults" value="2" min="0" max="99" required>
+									<button class="product-search-number-button number-button-plus" type="button">
 										<span class="visually-hidden">Увеличить количество</span>
 									</button>
 								</div>
 							</div>
-							<div class="hotel-search-number-group">
-								<div class="hotel-search-label-tooltip">
-									<label class="hotel-search-label text-heading-capitalize" for="hotel-search-children">Дети:</label>
-									<div class="hotel-search-tooltip">
+							<div class="product-search-number-group">
+								<div class="product-search-label-tooltip">
+									<label class="product-search-label text-heading-capitalize" for="product-search-children">Дети:</label>
+									<div class="product-search-tooltip">
 										<button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
 										<span class="tooltip-text" id="tooltip-label-children" role="tooltip">
 											Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
 										</span>
 									</div>
 								</div>
-								<div class="hotel-search-number">
-									<button class="hotel-search-number-button number-button-minus" type="button">
+								<div class="product-search-number">
+									<button class="product-search-number-button number-button-minus" type="button">
 										<span class="visually-hidden">Уменьшить количество</span>
 									</button>
-									<input class="hotel-search-number-input text-field" id="hotel-search-children" type="number" name="children" value="2" min="0" max="99" required>
-									<button class="hotel-search-number-button number-button-plus" type="button">
+									<input class="product-search-number-input text-field" id="product-search-children" type="number" name="children" value="2" min="0" max="99" required>
+									<button class="product-search-number-button number-button-plus" type="button">
 										<span class="visually-hidden">Увеличить количество</span>
 									</button>
 								</div>
 							</div>
 
-							<button class="hotel-search-button button-blue" type="submit">Найти</button>
+							<button class="product-search-button button-blue" type="submit">Найти</button>
 						</form>
 					</section>
 				</div>
